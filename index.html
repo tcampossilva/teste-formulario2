@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fechamento de evento</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+         
+    </head>
+    <body id="mostrar">
+        <main id="principal">
+            <header id="cabeca">
+                <h1>Finalização do evento</h1>
+            </header>
+            <section id="fomula">
+            <label id="formatarlabel">Qual o seu H?</label>
+             <input type="text" name="idcaca" class="formatinput" id="idCacador" required>   
+            <br />
+            <label id="formatarlabel">Número do evento: </label>
+            <input type="text" class="formatinput" name="evento" id="evento" required>
+            <br />
+            <label id="formatarlabel">Data/hora do evento: </label>
+            <input type="datetime-local" class="formatinput" name="data" id="dataEvento" required>
+            <br />
+            <label id="formatarlabel">Placa: </label>
+            <input type="text" class="formatinput" name="placa" id="placa" required>
+            <br />
+            <h2>Tipo de veículo</h2>
+            <input type="radio" class="radioo" name="tpveiculos" value="Auto" id="tipoVeiculo" checked><label id="formatarlabel">Auto</label>
+            <br />
+            <input type="radio" class="radioo" name="tpveiculos" value="Caminhão" id="tipoVeiculo"><label id="formatarlabel">Caminhão</label>
+            <br />
+            <input type="radio" class="radioo" name="tpveiculos" value="Maquina" id="tipoVeiculo"><label id="formatarlabel">Máquina</label>
+            <br />
+            <input type="radio" class="radioo" name="tpveiculos" value="Moto" id="tipoVeiculo"><label id="formatarlabel">Moto</label>
+            <br />
+            <input type="radio" class="radioo" name="tpveiculos" value="Semi-reboque" id="tipoVeiculo"><label id="formatarlabel">Semi-reboque</label>
+            <br />
+            <input type="radio" class="radioo" name="tpveiculos" value="Utilitario" id="tipoVeiculo"><label id="formatarlabel">Utilitário</label>
+            <br />
+            <input type="radio" class="radioo" name="tpveiculos" value="Outos" id="tipoVeiculo"><label id="formatarlabel">Outros</label>
+            <h2>Dados do Veículo</h2>
+            <label id="formatarlabel">Marca: </label>
+            <br />
+            <input type="text" name="marca" class="formatinput" id="marca" required>
+            <br />
+            <label id="formatarlabel">Modelo: </label>
+            <br />
+            <input type="text" name="modelo" class="formatinput" id="modelo" required>
+            <h2>Tipo do delito</h2>
+            <input type="radio" name="delito" value="Roubo" class="radioo" id="roubo" checked><label id="formatarlabel">Roubo</label>
+            <br />
+            <input type="radio" name="delito" value="Furto" class="radioo" id="furto" required><label id="formatarlabel">Furto</label>
+            <br />
+            <input type="radio" name="delito" value="Suspeita" class="radioo" id="suspeita"><label id="formatarlabel">Suspeita</label>
+            <br />
+            <input type="radio" name="delito" value="Apropriação Indebita" class="radioo" id="apropriacao"><label id="formatarlabel">Apropriação Indébita</label>
+            <br />
+            <input type="radio" name="delito" value="Pronta" class="radioo" id="pronta"><label id="formatarlabel">Pronta</label>
+            <br />
+            <input type="radio" name="delito" value="Alertas" class="radioo" id="alertas"><label id="formatarlabel">Alertas</label>
+            <br />
+            <input type="radio" name="delito" value="Outos" class="radioo" id="outrosDelitos"><label id="formatarlabel">Outros</label>
+            <h2>Dados do caçador que está finalizando o evento</h2>
+            <label id="formatarlabel">Caçador</label>
+            <input type="text" id="cacafechar" class="formatinput" required>
+            <br />
+            <label id="formatarlabel">Teve rendição:</label>
+            <br />
+            <label id="formatarlabel">Sim:</label>
+            <input type="radio" name="redicao" class="radioo" id="simRendicao">
+            <label id="formatarlabel">Não:</label>
+            <input type="radio" name="redicao" class="radioo" id="naoRendicao">
+            <br>
+            <h2>Dados do 1.74</h2>
+            <label id="formatarlabel">Data/Horas do início do 1.38:</label>
+            <input type="datetime-local" id="inícioRastre" class="formatinput" required>
+            <br>
+            <label id="formatarlabel">Data/Horas do 1.74:</label>
+            <input type="datetime-local" id="horaRecuperacao" class="formatinput" required>
+            <br>
+            <label id="formatarlabel">Teve apoio policial: </label>
+            <label id="formatarlabel">Sim:</label><input type="radio" id="simApoio" class="radioo">
+            <label id="formatarlabel">Não:</label><input type="radio" id="naoApoio" class="radioo">
+            <br />
+            <label id="formatarlabel">Data/Horas do apoio policial:</label>
+            <input type="datetime-local" name="horaApoio" class="formatinput" required>
+            <br />
+            <label id="formatarlabel">Autoridade: </label>
+            <select id="formatselect">
+                <option id="pm" value="pm">Policia Militar</option>
+                <option id="pc" value="pc">Policia civil</option>
+                <option id="gcm" value="gcm">GCM</option>
+            </select>
+            <br />
+            <label id="formatarlabel">Número da VTR: </label>
+            <input type="text" id="viatura" class="formatinput" required>
+            <br />
+            <label id="formatarlabel">Número do NOC:</label>
+            <input type="text" id="noc" class="formatinput" required><br />
+            <label id="formatarlabel">Tem avarias: </label>
+            <label id="formatarlabel">Sim:</label>
+            <input type="radio" name="avarias" id="simAvaria" class="radioo">
+            <label id="formatarlabel">Não:</label>
+            <input type="radio" name="avarias" id="naoAvaria" class="radioo">
+            <br />
+            <label id="formatarlabel">Direcionamento do veículo</label>
+            <select id="formatselect">
+                <option id="local" >Liberado no local</option>
+                <option id="delegacia" >Delegacia / Base</option>
+                <option id="apreendido" >Apreendido</option>
+                <option id="casa" >Entregue na residencia</option>
+                <option id="equipamento" >Equipamento</option>
+            </select>
+            <br />
+            <label id="formatarlabel">Endereço da recuperação: </label>
+            <input type="text" class="formatinput" id="localRecu" required>
+            <br />
+            <label id="formatarlabel">Tipo de 1.20</label>
+            <select id="formatselect">
+                <option id="tipoCasa" name="Casa">Casa</option>
+                <option id="viaPublica" name="via">Via Publica</option>
+                <option id="mata" name="mata">Mata</option>
+                <option id="tipoOutro" name="outos">Outros</option>
+            </select>
+            <br />
+            <label id="formatarlabel">Observações: </label>
+            <input type="text" id="observacao" class="formatinput" required>
+            <br />
+            <label id="formatarlabel">Data/Hora do término do evento: </label>
+            <input type="datetime-local" id="fimevento" class="formatinput" required>
+            <br />
+            <label id="formatarlabel">Carregar fotos: </label>
+            <input type="file" id="fotos" multiple accept="image/*" class="formataCarregaFotos">
+            <div id="fotosVeiculo"></div>
+            <script>
+              const fotos = document.getElementById('fotos')
+              const fotosVeiculo = document.getElementById('fotosVeiculo')
+            
+              fotos.addEventListener('change', (event) => {
+                const files = event.target.files
+                for (let i = 0; i < files.length; i++) {
+                  const file = files[i]
+                  if (file.type.startsWith('image/')) {
+                    const reader = new FileReader()
+                    reader.onload = (e) => {
+                      const img = document.createElement('img')
+                      img.src = e.target.result
+                      fotosVeiculo.appendChild(img)
+                    }
+                    reader.readAsDataURL(file)
+                  }
+                }
+              });
+            </script>
+            <button type="submit" class="botao" id="btn" data-button onclick="fechar()">Finalizar</button>
+              <script src="js/testeScript.js"></script>
+        </main>
+    </body>
+</html>
