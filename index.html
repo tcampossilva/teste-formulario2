@@ -1,161 +1,343 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Fechamento de evento</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="css/estilo.css">
-         
-    </head>
-    <body id="mostrar">
-        <main id="principal">
-            <header id="cabeca">
-                <h1>Finalização do evento</h1>
-            </header>
-            <section id="fomula">
-            <label id="formatarlabel">Qual o seu H?</label>
-             <input type="text" name="idcaca" class="formatinput" id="idCacador" required>   
-            <br />
-            <label id="formatarlabel">Número do evento: </label>
-            <input type="text" class="formatinput" name="evento" id="evento" required>
-            <br />
-            <label id="formatarlabel">Data/hora do evento: </label>
-            <input type="datetime-local" class="formatinput" name="data" id="dataEvento" required>
-            <br />
-            <label id="formatarlabel">Placa: </label>
-            <input type="text" class="formatinput" name="placa" id="placa" required>
-            <br />
-            <h2>Tipo de veículo</h2>
-            <input type="radio" class="radioo" name="tpveiculos" value="Auto" id="tipoVeiculo" checked><label id="formatarlabel">Auto</label>
-            <br />
-            <input type="radio" class="radioo" name="tpveiculos" value="Caminhão" id="tipoVeiculo"><label id="formatarlabel">Caminhão</label>
-            <br />
-            <input type="radio" class="radioo" name="tpveiculos" value="Maquina" id="tipoVeiculo"><label id="formatarlabel">Máquina</label>
-            <br />
-            <input type="radio" class="radioo" name="tpveiculos" value="Moto" id="tipoVeiculo"><label id="formatarlabel">Moto</label>
-            <br />
-            <input type="radio" class="radioo" name="tpveiculos" value="Semi-reboque" id="tipoVeiculo"><label id="formatarlabel">Semi-reboque</label>
-            <br />
-            <input type="radio" class="radioo" name="tpveiculos" value="Utilitario" id="tipoVeiculo"><label id="formatarlabel">Utilitário</label>
-            <br />
-            <input type="radio" class="radioo" name="tpveiculos" value="Outos" id="tipoVeiculo"><label id="formatarlabel">Outros</label>
-            <h2>Dados do Veículo</h2>
-            <label id="formatarlabel">Marca: </label>
-            <br />
-            <input type="text" name="marca" class="formatinput" id="marca" required>
-            <br />
-            <label id="formatarlabel">Modelo: </label>
-            <br />
-            <input type="text" name="modelo" class="formatinput" id="modelo" required>
-            <h2>Tipo do delito</h2>
-            <input type="radio" name="delito" value="Roubo" class="radioo" id="roubo" checked><label id="formatarlabel">Roubo</label>
-            <br />
-            <input type="radio" name="delito" value="Furto" class="radioo" id="furto" required><label id="formatarlabel">Furto</label>
-            <br />
-            <input type="radio" name="delito" value="Suspeita" class="radioo" id="suspeita"><label id="formatarlabel">Suspeita</label>
-            <br />
-            <input type="radio" name="delito" value="Apropriação Indebita" class="radioo" id="apropriacao"><label id="formatarlabel">Apropriação Indébita</label>
-            <br />
-            <input type="radio" name="delito" value="Pronta" class="radioo" id="pronta"><label id="formatarlabel">Pronta</label>
-            <br />
-            <input type="radio" name="delito" value="Alertas" class="radioo" id="alertas"><label id="formatarlabel">Alertas</label>
-            <br />
-            <input type="radio" name="delito" value="Outos" class="radioo" id="outrosDelitos"><label id="formatarlabel">Outros</label>
-            <h2>Dados do caçador que está finalizando o evento</h2>
-            <label id="formatarlabel">Caçador</label>
-            <input type="text" id="cacafechar" class="formatinput" required>
-            <br />
-            <label id="formatarlabel">Teve rendição:</label>
-            <br />
-            <label id="formatarlabel">Sim:</label>
-            <input type="radio" name="redicao" class="radioo" id="simRendicao">
-            <label id="formatarlabel">Não:</label>
-            <input type="radio" name="redicao" class="radioo" id="naoRendicao">
-            <br>
-            <h2>Dados do 1.74</h2>
-            <label id="formatarlabel">Data/Horas do início do 1.38:</label>
-            <input type="datetime-local" id="inícioRastre" class="formatinput" required>
-            <br>
-            <label id="formatarlabel">Data/Horas do 1.74:</label>
-            <input type="datetime-local" id="horaRecuperacao" class="formatinput" required>
-            <br>
-            <label id="formatarlabel">Teve apoio policial: </label>
-            <label id="formatarlabel">Sim:</label><input type="radio" id="simApoio" class="radioo">
-            <label id="formatarlabel">Não:</label><input type="radio" id="naoApoio" class="radioo">
-            <br />
-            <label id="formatarlabel">Data/Horas do apoio policial:</label>
-            <input type="datetime-local" name="horaApoio" class="formatinput" required>
-            <br />
-            <label id="formatarlabel">Autoridade: </label>
-            <select id="formatselect">
-                <option id="pm" value="pm">Policia Militar</option>
-                <option id="pc" value="pc">Policia civil</option>
-                <option id="gcm" value="gcm">GCM</option>
-            </select>
-            <br />
-            <label id="formatarlabel">Número da VTR: </label>
-            <input type="text" id="viatura" class="formatinput" required>
-            <br />
-            <label id="formatarlabel">Número do NOC:</label>
-            <input type="text" id="noc" class="formatinput" required><br />
-            <label id="formatarlabel">Tem avarias: </label>
-            <label id="formatarlabel">Sim:</label>
-            <input type="radio" name="avarias" id="simAvaria" class="radioo">
-            <label id="formatarlabel">Não:</label>
-            <input type="radio" name="avarias" id="naoAvaria" class="radioo">
-            <br />
-            <label id="formatarlabel">Direcionamento do veículo</label>
-            <select id="formatselect">
-                <option id="local" >Liberado no local</option>
-                <option id="delegacia" >Delegacia / Base</option>
-                <option id="apreendido" >Apreendido</option>
-                <option id="casa" >Entregue na residencia</option>
-                <option id="equipamento" >Equipamento</option>
-            </select>
-            <br />
-            <label id="formatarlabel">Endereço da recuperação: </label>
-            <input type="text" class="formatinput" id="localRecu" required>
-            <br />
-            <label id="formatarlabel">Tipo de 1.20</label>
-            <select id="formatselect">
-                <option id="tipoCasa" name="Casa">Casa</option>
-                <option id="viaPublica" name="via">Via Publica</option>
-                <option id="mata" name="mata">Mata</option>
-                <option id="tipoOutro" name="outos">Outros</option>
-            </select>
-            <br />
-            <label id="formatarlabel">Observações: </label>
-            <input type="text" id="observacao" class="formatinput" required>
-            <br />
-            <label id="formatarlabel">Data/Hora do término do evento: </label>
-            <input type="datetime-local" id="fimevento" class="formatinput" required>
-            <br />
-            <label id="formatarlabel">Carregar fotos: </label>
-            <input type="file" id="fotos" multiple accept="image/*" class="formataCarregaFotos">
-            <div id="fotosVeiculo"></div>
-            <script>
-              const fotos = document.getElementById('fotos')
-              const fotosVeiculo = document.getElementById('fotosVeiculo')
-            
-              fotos.addEventListener('change', (event) => {
-                const files = event.target.files
-                for (let i = 0; i < files.length; i++) {
-                  const file = files[i]
-                  if (file.type.startsWith('image/')) {
-                    const reader = new FileReader()
-                    reader.onload = (e) => {
-                      const img = document.createElement('img')
-                      img.src = e.target.result
-                      fotosVeiculo.appendChild(img)
-                    }
-                    reader.readAsDataURL(file)
-                  }
-                }
-              });
-            </script>
-            <button type="submit" class="botao" id="btn" data-button onclick="fechar()">Finalizar</button>
-              <script src="js/testeScript.js"></script>
-        </main>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fechamento de Evento</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body>
+    <main id="principal">
+        <header id="cabeca">
+            <h1>Finalização do Evento</h1>
+            <p>Registro operacional e envio do relatório de encerramento da ocorrência</p>
+        </header>
+
+        <section id="fomula">
+            <form id="fechado" method="post" action="https://formsubmit.co/ajax/tcampossilva@hotmail.com.br" enctype="multipart/form-data" data-form>
+                <!-- Configurações do FormSubmit -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_subject" value="Fechamento de Evento Operacional">
+
+                <!-- 1. Identificação do Chamado -->
+                <fieldset class="form-section">
+                    <legend>
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        Identificação da Ocorrência
+                    </legend>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="IdCacador" class="form-label">Qual o seu H? <span class="required">*</span></label>
+                            <input type="text" name="idcaca" class="formatinput" id="IdCacador" placeholder="Ex: H-10" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="evento" class="form-label">Número do Evento <span class="required">*</span></label>
+                            <input type="text" name="evento" class="formatinput" id="evento" placeholder="Ex: 123456" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dataEvento" class="form-label">Data/Hora do Evento <span class="required">*</span></label>
+                            <input type="datetime-local" name="data" class="formatinput" id="dataEvento" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cacafechar" class="form-label">Caçador Finalizador <span class="required">*</span></label>
+                            <input type="text" name="cacador" id="cacafechar" class="formatinput" placeholder="Nome do caçador" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- 2. Dados do Veículo & Delito -->
+                <fieldset class="form-section">
+                    <legend>
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="3" width="15" height="13"></rect>
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                        </svg>
+                        Dados do Veículo & Tipo de Delito
+                    </legend>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="placa" class="form-label">Placa <span class="required">*</span></label>
+                            <input type="text" name="placa" class="formatinput text-uppercase" id="placa" placeholder="ABC-1234 ou ABC1D23" maxlength="8" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="marca" class="form-label">Marca</label>
+                            <input type="text" name="marca" class="formatinput" id="marca" placeholder="Ex: Volkswagen, Scania">
+                        </div>
+                        <div class="form-group">
+                            <label for="modelo" class="form-label">Modelo</label>
+                            <input type="text" name="modelo" class="formatinput" id="modelo" placeholder="Ex: Gol, Constellation">
+                        </div>
+                    </div>
+
+                    <!-- Tipo de Veículo em Chips -->
+                    <div class="form-group mt-3">
+                        <label class="group-label">Tipo de Veículo <span class="required">*</span></label>
+                        <div class="chips-grid">
+                            <label class="chip-item">
+                                <input type="radio" name="tpveiculos" value="Auto" id="auto" checked>
+                                <span>Auto</span>
+                            </label>
+                            <label class="chip-item">
+                                <input type="radio" name="tpveiculos" value="Caminhão" id="caminhao">
+                                <span>Caminhão</span>
+                            </label>
+                            <label class="chip-item">
+                                <input type="radio" name="tpveiculos" value="Máquina" id="maquina">
+                                <span>Máquina</span>
+                            </label>
+                            <label class="chip-item">
+                                <input type="radio" name="tpveiculos" value="Moto" id="moto">
+                                <span>Moto</span>
+                            </label>
+                            <label class="chip-item">
+                                <input type="radio" name="tpveiculos" value="Semi-reboque" id="semireboque">
+                                <span>Semi-reboque</span>
+                            </label>
+                            <label class="chip-item">
+                                <input type="radio" name="tpveiculos" value="Utilitário" id="utilitario">
+                                <span>Utilitário</span>
+                            </label>
+                            <label class="chip-item">
+                                <input type="radio" name="tpveiculos" value="Outros" id="outros">
+                                <span>Outros</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Tipo do Delito em Chips -->
+                    <div class="form-group mt-3">
+                        <label class="group-label">Tipo do Delito <span class="required">*</span></label>
+                        <div class="chips-grid">
+                            <label class="chip-item">
+                                <input type="radio" name="delito" value="Roubo" id="roubo" checked>
+                                <span>Roubo</span>
+                            </label>
+                            <label class="chip-item">
+                                <input type="radio" name="delito" value="Furto" id="furto">
+                                <span>Furto</span>
+                            </label>
+                            <label class="chip-item">
+                                <input type="radio" name="delito" value="Suspeita" id="suspeita">
+                                <span>Suspeita</span>
+                            </label>
+                            <label class="chip-item">
+                                <input type="radio" name="delito" value="Apropriação Indébita" id="apropriacao">
+                                <span>Apropriação Indébita</span>
+                            </label>
+                            <label class="chip-item">
+                                <input type="radio" name="delito" value="Pronta" id="pronta">
+                                <span>Pronta</span>
+                            </label>
+                            <label class="chip-item">
+                                <input type="radio" name="delito" value="Alertas" id="alertas">
+                                <span>Alertas</span>
+                            </label>
+                            <label class="chip-item">
+                                <input type="radio" name="delito" value="Outros" id="outrosDelitos">
+                                <span>Outros</span>
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- 3. Rastreamento e Recuperação (1.74 / 1.38) -->
+                <fieldset class="form-section">
+                    <legend>
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="22" y1="12" x2="18" y2="12"></line>
+                            <line x1="6" y1="12" x2="2" y2="12"></line>
+                            <line x1="12" y1="6" x2="12" y2="2"></line>
+                            <line x1="12" y1="22" x2="12" y2="18"></line>
+                        </svg>
+                        Dados do 1.74 (Recuperação) & 1.38
+                    </legend>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="inicioRastre" class="form-label">Data/Hora Início do 1.38</label>
+                            <input type="datetime-local" name="inicio_rastreio" id="inicioRastre" class="formatinput">
+                        </div>
+                        <div class="form-group">
+                            <label for="horaRecuperacao" class="form-label">Data/Hora do 1.74 (Recuperação) <span class="required">*</span></label>
+                            <input type="datetime-local" name="hora_recuperacao" id="horaRecuperacao" class="formatinput" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fimevento" class="form-label">Data/Hora Término do Evento</label>
+                            <input type="datetime-local" name="fim_evento" id="fimevento" class="formatinput">
+                        </div>
+                    </div>
+
+                    <div class="form-grid grid-2 mt-3">
+                        <div class="form-group">
+                            <label class="group-label">Teve Rendição?</label>
+                            <div class="toggle-group">
+                                <label class="toggle-item">
+                                    <input type="radio" name="redicao" value="Sim" id="simRendicao">
+                                    <span>Sim</span>
+                                </label>
+                                <label class="toggle-item">
+                                    <input type="radio" name="redicao" value="Não" id="naoRendicao" checked>
+                                    <span>Não</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="group-label">Tem Avarias?</label>
+                            <div class="toggle-group">
+                                <label class="toggle-item">
+                                    <input type="radio" name="avarias" value="Sim" id="simAvaria">
+                                    <span>Sim</span>
+                                </label>
+                                <label class="toggle-item">
+                                    <input type="radio" name="avarias" value="Não" id="naoAvaria" checked>
+                                    <span>Não</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-grid mt-3">
+                        <div class="form-group full-width">
+                            <label for="localRecu" class="form-label">Endereço da Recuperação</label>
+                            <input type="text" name="local_recuperacao" class="formatinput" id="localRecu" placeholder="Rua, número, bairro, cidade ou coordenadas">
+                        </div>
+                        <div class="form-group">
+                            <label for="tipoLocal" class="form-label">Tipo de 1.20 (Ambiente)</label>
+                            <select name="tipo_120" id="tipoLocal" class="form-select">
+                                <option value="Via Pública">Via Pública</option>
+                                <option value="Casa">Casa</option>
+                                <option value="Mata">Mata</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="direcionamento" class="form-label">Direcionamento do Veículo</label>
+                            <select name="direcionamento" id="direcionamento" class="form-select">
+                                <option value="Liberado no local">Liberado no local</option>
+                                <option value="Delegacia / Base">Delegacia / Base</option>
+                                <option value="Apreendido">Apreendido</option>
+                                <option value="Entregue na residencia">Entregue na residência</option>
+                                <option value="Equipamento">Equipamento</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- 4. Apoio Policial -->
+                <fieldset class="form-section">
+                    <legend>
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        Apoio Policial
+                    </legend>
+
+                    <div class="form-group">
+                        <label class="group-label">Teve Apoio Policial?</label>
+                        <div class="toggle-group">
+                            <label class="toggle-item">
+                                <input type="radio" name="apoio_policial" value="Sim" id="simApoio">
+                                <span>Sim</span>
+                            </label>
+                            <label class="toggle-item">
+                                <input type="radio" name="apoio_policial" value="Não" id="naoApoio" checked>
+                                <span>Não</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Campos exibidos dinamicamente se Teve Apoio for "Sim" -->
+                    <div id="dadosApoioPolicial" class="form-grid mt-3 is-hidden">
+                        <div class="form-group">
+                            <label for="horaApoio" class="form-label">Data/Hora do Apoio Policial</label>
+                            <input type="datetime-local" name="horaApoio" id="horaApoio" class="formatinput">
+                        </div>
+                        <div class="form-group">
+                            <label for="autoridade" class="form-label">Autoridade</label>
+                            <select name="autoridade" id="autoridade" class="form-select">
+                                <option value="Policia Militar">Polícia Militar</option>
+                                <option value="Policia Civil">Polícia Civil</option>
+                                <option value="GCM">GCM</option>
+                                <option value="PRF">PRF</option>
+                                <option value="Outra">Outra</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="viatura" class="form-label">Número da VTR</label>
+                            <input type="text" name="viatura" id="viatura" class="formatinput" placeholder="Ex: M-12345">
+                        </div>
+                        <div class="form-group">
+                            <label for="noc" class="form-label">Número do NOC / B.O.</label>
+                            <input type="text" name="noc" id="noc" class="formatinput" placeholder="Ex: NOC 98765">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- 5. Observações e Registro Fotográfico -->
+                <fieldset class="form-section">
+                    <legend>
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                            <circle cx="12" cy="13" r="4"></circle>
+                        </svg>
+                        Observações & Fotos do Veículo
+                    </legend>
+
+                    <div class="form-group full-width">
+                        <label for="observacao" class="form-label">Observações</label>
+                        <textarea name="observacao" id="observacao" class="form-textarea" placeholder="Detalhes adicionais, estado do veículo, pertences encontrados, etc."></textarea>
+                    </div>
+
+                    <div class="form-group full-width mt-3">
+                        <label class="group-label">Carregar Fotos</label>
+                        <div class="upload-dropzone" id="dropzone">
+                            <input type="file" id="fotos" name="fotos[]" multiple accept="image/*" class="formataCarregaFotos">
+                            <div class="dropzone-content">
+                                <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="17 8 12 3 7 8"></polyline>
+                                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                                </svg>
+                                <p class="dropzone-text"><strong>Clique para selecionar fotos</strong> ou arraste para cá</p>
+                                <span class="dropzone-hint">Formatos: JPG, PNG, WEBP (selecione uma ou várias imagens)</span>
+                            </div>
+                        </div>
+
+                        <!-- Galeria interativa de miniaturas das fotos -->
+                        <div id="fotosVeiculo"></div>
+                    </div>
+                </fieldset>
+
+                <!-- Botão de Finalização -->
+                <div class="form-actions">
+                    <button type="submit" class="botao" id="btn" data-button>
+                        <span class="btn-label">Finalizar e Enviar</span>
+                        <span class="spinner"></span>
+                    </button>
+                </div>
+
+                <!-- Notificações de Sucesso / Erro -->
+                <div id="statusMessage" class="status-box" style="display: none;"></div>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/testeScript.js"></script>
+</body>
 </html>
